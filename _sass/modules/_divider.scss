@@ -10,7 +10,7 @@ hr.yo, hr.question-dot {
     padding: 12px 0;
 }
 
-.arrow {
+hr.arrow {
     @include green-bar;
     @include block-padding();
 }

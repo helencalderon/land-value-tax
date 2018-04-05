@@ -8,5 +8,5 @@ permalink: /
 ---
 
 {% include site-description.html %}
-{% include divider.html %}
+{% include divider.html class="red-arrow" %}
 {% include film.html %}
