@@ -1,0 +1,28 @@
+<!-- Twitter social card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@bodhinyana" />
+<meta name="twitter:title" content="{{page.title}}" />
+{% if page.reading_snippet %}
+<meta name="twitter:description" content="{{page.reading_snippet}}" />
+{% else %}
+<meta name="twitter:description" content="{{site.description}}" />
+{% endif %}
+<!-- end Twitter social card -->
+<!-- Facebook Open Graph -->
+{% if page.title and page.title != "TBC" %}
+<meta property="og:title" content="{{page.title}}" />
+<meta property="og:site_name" content="{{site.title}}" />
+<meta property="og:url" content="{{page.url | prepend: site.url}}" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:image" content="{{"/assets/cusions.jpg" | prepend: site.url}}" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1412" />
+<meta property="og:image:height" content="582" />
+{% if page.reading_snippet %}
+<meta property="og:description" content="{{page.reading_snippet}}" />
+{% else %}
+<meta property="og:description" content="{{site.description}}" />
+{% endif %}
+<meta property="fb:app_id" content="1083034281713204" />
+{% endif %}
