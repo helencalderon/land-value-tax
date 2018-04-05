@@ -1,0 +1,31 @@
+<section class="community">
+    <h1>Political initiatives</h1>
+{% include divider.html class="question-dot" %}
+<div class="cards">
+{% for organisation in site.data.organisations %}
+
+{% assign org = organisation[1] %}
+{% comment %} not sure why I need assignment and especially key 1 here but it makes it work {% endcomment %}
+    <div class="card">
+        <p >Community initiative</p>
+
+             <div class="social">
+{% if org.twitter %}
+    <a href="https://twitter.com/{{ org.twitter }}" class="social"><i class="fab fa-fw fa-twitter fa-2x"></i></a>
+    {% endif %}
+         {% if org.facebook %}
+
+    <a href="https://www.facebook.com/{{ org.facebook }}" class="social"><i class="fab fa-fw fa-facebook fa-2x"></i></a>
+    {% endif %}
+</div>
+
+        <h2>{{org.name}}</h2>
+             <a href="{{org.website}}" class="community-img"><img width="120" height="auto" src="{{ site.baseurl }}/img/{{ org.img }}" alt="{{org.name}}"></a>
+        <p> {{ org.description }}</p>
+
+
+    </div>
+{% endfor %}
+</div>
+{% include divider.html class="question-dot" %}
+</section>

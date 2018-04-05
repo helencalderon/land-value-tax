@@ -1,0 +1,19 @@
+<header id="site-header">
+	<a id="logo" href="{{site.url}}"><img src="/img/logo-5.svg" alt="light bulb" >Homes <span class="cursive">for all</a>
+    <nav id="site-nav">
+        <a href="#" class="menu-icon" >Menu <img height="10px" width="auto" src="/img/arrow-left.gif" alt="">
+        </a>
+        <ul class="trigger">
+            {% assign pages = site.pages | sort: "name" %}
+            {% for page in pages %}
+                {% if page.nav_bar %}
+                <li class="page-link">
+                    <a  href="{{ page.url | prepend: site.baseurl }}">
+                {{ page.title }}</a>
+                </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+</header>
+

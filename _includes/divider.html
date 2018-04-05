@@ -1,0 +1,6 @@
+<section class="divider">
+    {% if include.class == "question-dot" %}
+    <i class="fas fa-fw fa-circle fa-2x"></i> {% endif %}
+    <hr class=" {{ include.class | default: " yo " }}" /> {% if include.class == "question-dot" %}
+    <i class="fas fa-fw fa-circle fa-2x"></i> {% endif %}
+</section>
