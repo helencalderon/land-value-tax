@@ -6,6 +6,6 @@ nav_bar: yes
 permalink: /vision/
 ---
 
-# Community initiatives #
+# Vision or How it would work#
 
 

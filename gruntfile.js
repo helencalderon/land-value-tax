@@ -71,11 +71,12 @@ module.exports = function(grunt) {
         },
 
  /*https://github.com/nDmitry/grunt-postcss */
+ //, {grid: true} not sure how to get grid to work.
         postcss: {
             options: {
                // map: true,
                 processors: [
-                    require('autoprefixer')({ browsers: '> 2% in GB' }, {grid: true}),
+                    require('autoprefixer')({ browsers: '> 2% in GB' }),
                     require('cssnano')()
                 ]
             },
@@ -103,3 +104,6 @@ module.exports = function(grunt) {
     grunt.registerTask('vendorjs', 'copy');
     grunt.registerTask('prefixcss', 'postcss');
 };
+
+
+//For PRODUCTION build run JEKYLL_ENV=production bundle exec jekyll build then GRUNT

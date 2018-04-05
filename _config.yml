@@ -15,14 +15,11 @@
 # in the templates via {{ site.myvariable }}.
 title: The UK's housing crisis | Land value tax
 email: helen.calderon@city.ac.uk
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+description: Land value tax and more.
+baseurl: "/land-value-tax" # the subpath or /student/acsf713 or /land-value-tax
+url: "https://helencalderon.github.io" # Or https://smcse.city.ac.uk or https://helencalderon.github.io
+twitter_username: helen26
+github_username:  helencalderon
 
 # Build settings
 markdown: kramdown
