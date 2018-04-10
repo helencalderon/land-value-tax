@@ -1,5 +1,10 @@
-$base-font-family: Futura, "Open Sans", Arial, sans-serif;
-$cursive-font: 'Lobster', "Brush Script MT", cursive;
+$base-font-family: Futura,
+"Open Sans",
+Arial,
+sans-serif;
+$cursive-font: 'Lobster',
+"Brush Script MT",
+cursive;
 $base-font-size: 16px;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 150%;
@@ -8,13 +13,10 @@ $light-green: #D2EDCD;
 $community-color: #FAD035;
 $red-color: #EC242D;
 $text-color: #000000;
-$chance-color: #ED7E24; //maybe or
-$another: #F07D25;
+$chance-color: #FA6B33;
 
 $text-color-light: lighten($text-color, 40%);
 $text-color-dark: darken($text-color, 25%);
-
-
 
 
 @function em($px, $base: $base-font-size) {
@@ -25,28 +27,28 @@ $spacing-unit: em(20px);
 
 
 @mixin border($side) {
-    @if $side == "tb" {
+    @if $side=="tb" {
         border-top: 3px solid $text-color;
         border-bottom: 3px solid $text-color;
     }
-    @if $side == "top"{
+    @if $side=="top" {
         border-top: 3px solid $text-color;
     }
-    @if $side == "bottom" {
+    @if $side=="bottom" {
         border-bottom: 3px solid $text-color;
     }
-    @if $side == "left" {
+    @if $side=="left" {
         border-left: 3px solid $text-color;
     }
-    @if $side == "right"{
+    @if $side=="right" {
         border-right: 3px solid $text-color;
     }
-    @if $side == "lrb"{
+    @if $side=="lrb" {
         border-right: 3px solid $text-color;
         border-bottom: 3px solid $text-color;
         border-left: 3px solid $text-color;
     }
-    @if $side == "all" {
+    @if $side=="all" {
         border-right: 3px solid $text-color;
         border-bottom: 3px solid $text-color;
         border-left: 3px solid $text-color;
@@ -54,14 +56,20 @@ $spacing-unit: em(20px);
     }
 }
 
-@mixin green-bar{
+@mixin green-bar {
     background-color: $light-green;
     @include border(tb);
 }
 
-@mixin redbackground{
+@mixin redbackground {
     background-color: $red-color;
     color: $background-color;
+}
+
+
+@mixin green-section {
+    background-color: $light-green;
+    padding: $spacing-unit;
 }
 
 @mixin xl-width {
@@ -69,24 +77,25 @@ $spacing-unit: em(20px);
     margin: 0 auto;
 }
 
-@mixin full-grid{
+@mixin full-grid {
     grid-column-start: 1;
     grid-column-end: 13;
 }
 
-@mixin flex-row{
-    display: flex;
+@mixin slider-mobile {
+    @media only screen and (max-width: $mobile) {
+        width: 100%;
+    }
 }
 
 @mixin button($color, $text-color) {
     color: $text-color;
     background-color: $color;
     border: 2px solid $text-color;
-    &:hover{
+    &:hover {
         color: $color;
         background-color: $text-color;
-
-  }
+    }
 }
 
 @mixin block-padding($x: 1.5, $y: 1.5) {
@@ -101,29 +110,25 @@ $spacing-unit: em(20px);
 
 @mixin font-size($element-size) {
 
-    @if $element-size == "h1" {
-      font-size: em(42px);
+    @if $element-size=="h1" {
+        font-size: em(42px);
     }
-    @if $element-size == "h2" {
-      font-size: em(26px)
+    @if $element-size=="h2" {
+        font-size: em(26px)
     }
-    @if $element-size == "h3" {
-      font-size: em(20px)
+    @if $element-size=="h3" {
+        font-size: em(20px)
     }
-    @if $element-size == "h4" {
-      font-size: em(16px)
+    @if $element-size=="h4" {
+        font-size: em(16px)
     }
-    @if $element-size == "p" {
-      font-size: em(16px)
+    @if $element-size=="p" {
+        font-size: em(16px)
     }
-    @if $element-size == "h5" {
-      font-size: em(13px)
+    @if $element-size=="h5" {
+        font-size: em(13px)
     }
 }
-
-
-
-
 
 // Width of the content area
 $main: 1280px;
@@ -131,20 +136,42 @@ $tiny-mobile: 320px;
 $mobile: 479px;
 $tablet: 768px;
 
+
+
 /**
  * Reset some basic elements
  */
 
 html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
+    box-sizing: border-box;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
     line-height: 150%;
 }
+
+
 
 /**
  * Basic styling
@@ -161,11 +188,26 @@ body {
     overflow-x: hidden;
 }
 
+
+
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
 
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, %vertical-rhythm {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
+%vertical-rhythm {
     margin-bottom: $spacing-unit / 2;
 }
 
@@ -190,25 +232,39 @@ h5 {
 }
 
 @media only screen and (max-width: $mobile) {
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, %vertical-rhythm {
-    margin-bottom: $spacing-unit/4;
-   }
-h1 {
-    font-size: em(26px);
-}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    ul,
+    ol,
+    dl,
+    figure,
+    %vertical-rhythm {
+        margin-bottom: $spacing-unit/4;
+    }
+    h1 {
+        font-size: em(26px);
+    }
 
-h2 {
-    font-size: em(20px);
-}
+    h2 {
+        font-size: em(20px);
+    }
 
-h3, h4 {
-    font-size: em(16px);
-}
+    h3,
+    h4 {
+        font-size: em(16px);
+    }
 
-h5 {
-    font-size: em(13px);
+    h5 {
+        font-size: em(13px);
+    }
 }
-        }
 
 
 
@@ -216,7 +272,9 @@ h5 {
  * Lists
  */
 
-ul, ol, li{
+ul,
+ol,
+li {
     margin: 0;
     padding: 0;
 }
@@ -225,14 +283,24 @@ li {
     list-style: none;
 }
 
+
+
 /**
  * Headings
  */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 300;
     text-transform: uppercase;
 }
+
+
+
 
 /**
  * Links
@@ -247,6 +315,9 @@ a {
         border-bottom: 3px $text-color solid;
     }
 }
+
+
+
 
 /**
  * Blockquotes
@@ -264,10 +335,12 @@ blockquote {
     }
 }
 
+
+
+
 /**
  * Wrapper
  */
-
 
 .grid-wrapper {
     display: grid;
@@ -277,9 +350,27 @@ blockquote {
 }
 
 .flex-wrapper {
-  display: flex;
-  flex-direction: column;
-  }
+    display: flex;
+    flex-direction: column;
+}
+
+%card {
+    padding: $spacing-unit;
+    margin: $spacing-unit/2 0;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+    flex-grow: 0;
+    p:first-child {
+        @include font-size(h3);
+        font-family: $cursive-font;
+    }
+    @media only screen and (min-width: 340px) and (max-width: $mobile) {
+        min-height: 230px;
+    }
+}
+
+
+
+
 
 
 
@@ -295,19 +386,18 @@ blockquote {
     }
 }
 
-/*
-.container{
-    @include xl-width;
-    @extend %clearfix;
-}
-*/
+
+
+
+
+
 
 /**
  * Icons
  */
 
 .icon {
-    > svg {
+    >svg {
         display: inline-block;
         width: 16px;
         height: 16px;
@@ -318,27 +408,14 @@ blockquote {
     }
 }
 
-svg{
+svg {
     -webkit-transform-style: preserve-3d;
 }
 
-label{
-    display: block;
-    padding-top:  $spacing-unit;
-    padding-bottom:  $spacing-unit;
-  }
-
-input, textarea{
-  width: 75%;
-  background-color: $background-color;
-  border: 0;
-  padding: .5 * $spacing-unit;
-  color: $text-color;
-  @media only screen and (max-width: 600px) {
-        width: 93%;
-  }
-  }
-
 .cursive {
     font-family: $cursive-font;
-  }
+}
+
+.hide {
+    display: none;
+}

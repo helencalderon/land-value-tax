@@ -3,16 +3,19 @@
     align-items: center;
 }
 
-
 hr.yo, hr.question-dot {
     width: 93%;
     margin: 0 auto;
     padding: 12px 0;
 }
 
-hr.arrow {
+hr.red-arrow {
     @include green-bar;
-    @include block-padding();
+    @include block-padding(3,3);
+    width: 100%;
+    background-image: url("../img/arrow.gif");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .question-dot {

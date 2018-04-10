@@ -1,0 +1,7 @@
+.page{
+    max-width: 630px;
+    margin: $spacing-unit auto;
+    @media only screen and (max-width: 630px) {
+        margin: $spacing-unit;
+    }
+}

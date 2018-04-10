@@ -1,0 +1,107 @@
+.house-prices {
+    display: flex;
+    flex-flow: column;
+    @include green-section;
+}
+
+.text-wrap{
+    max-width: 630px;
+}
+
+#card-title {
+    align-self: center;
+}
+
+.chance {
+    @extend %card;
+    background-color: $chance-color;
+    width: 500px;
+    flex-basis: 297px;
+    align-self: center;
+    background-image: url(../img/chance-question-mark.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    @media only screen and (max-width: $mobile) {
+        width: 100%;
+    }
+}
+
+
+#message {
+    @include font-size(h2);
+    text-transform: uppercase;
+    margin-top: $spacing-unit*2;
+    text-align: center;
+    @media only screen and (max-width: $mobile) {
+        @include font-size(h3);
+    }
+}
+
+
+#chance-slider,
+#property-wrapper {
+
+    align-self: center;
+}
+
+#result {
+    display: flex;
+    flex-flow: column;
+}
+
+#property-wrapper {
+    // img wrapper
+    width: 100%;
+    max-width: 500px;
+    padding: $spacing-unit 0;
+    position: relative;
+}
+
+#property-img {
+    width: 100%;
+    height: auto;
+}
+
+#jquery-wrapper {
+    display: none;
+}
+
+#flex-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+[for=chance-slider] {
+    padding-right: 5px;
+}
+
+#price {
+    position: absolute;
+    font-size: 23px;
+    top: 71.74%;
+    left: 46.8%;
+    @media only screen and (max-width: $mobile) {
+        font-size: 21px;
+        top: 71.2%;
+    }
+    @media only screen and (max-width: 460px) {
+        top: 71%;
+    }
+    @media only screen and (max-width: 430px) {
+        font-size: 18px;
+    }
+    @media only screen and (max-width: 400px) {
+        top: 70.5;
+    }
+    @media only screen and (max-width: 370px) {
+        top: 70%;
+        font-size: 16px;
+    }
+    @media only screen and (max-width: 340px) {
+        top: 69.5%;
+    }
+    @media only screen and (max-width: $tiny-mobile) {
+        top: 69%;
+        font-size: 14px;
+    }
+}

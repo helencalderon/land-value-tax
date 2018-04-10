@@ -16,8 +16,8 @@
 title: The UK's housing crisis | Land value tax
 email: helen.calderon@city.ac.uk
 description: Land value tax and more.
-baseurl: "/land-value-tax" # the subpath or /student/acsf713 or /land-value-tax
-url: "https://helencalderon.github.io" # Or https://smcse.city.ac.uk or https://helencalderon.github.io
+baseurl: "/student/acsf713" # the subpath or /student/acsf713 or /land-value-tax
+url: "https://smcse.city.ac.uk" # Or https://smcse.city.ac.uk or https://helencalderon.github.io
 twitter_username: helen26
 github_username:  helencalderon
 

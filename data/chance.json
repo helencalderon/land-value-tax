@@ -1,0 +1,13 @@
+---
+---
+
+[{% for data in site.data.chance %}
+    {% assign property = data[1] %}
+  {
+    "message": "{{ property.message }}",
+    "price": {{ property.price }},
+    "img": "{{ site.baseurl | append: property.img }}",
+    "alt": "{{property.alt}}"
+  }
+  {% if forloop.last == false %},{% endif %}
+{% endfor %}]

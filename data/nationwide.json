@@ -1,0 +1,10 @@
+---
+---
+
+[{% for data in site.data.nationwide %}
+  {
+    "year": {{ data.year }},
+    "ratio": {{ data.london_ratio }}
+  }
+  {% if forloop.last == false %},{% endif %}
+{% endfor %}]

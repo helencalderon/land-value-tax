@@ -25,13 +25,14 @@ module.exports = function(grunt) {
         concat: {
 
             options: {
-                //banner: "---\n---\n", uncomment if Liquid ever needed
+               // banner: "",//"---\n---\n", uncomment if Liquid ever needed
+               // footer: "",
                 separator: '\n',
-                stripBanners: true,
+                stripBanners: false,
             },
             dist: {
-                src: ['dev/js/*.js'],
-                dest: 'dev/js/main.js',
+                src: ['scripts/**/*.js'],
+                dest: 'scripts/dev-compiled.js',
             },
 
         },
@@ -41,7 +42,7 @@ module.exports = function(grunt) {
         uglify: {
             my_target: {
                 files: {
-                    'js/main.js': ['dev/js/main.js']
+                    'main.js': 'scripts/dev-compiled.js'
                 }
             }
         },
@@ -103,6 +104,7 @@ module.exports = function(grunt) {
     grunt.registerTask('jsdev', ['clean:scripts', 'concat', 'jshint']);
     grunt.registerTask('vendorjs', 'copy');
     grunt.registerTask('prefixcss', 'postcss');
+    grunt.registerTask('ugly', 'uglify');
 };
 
 

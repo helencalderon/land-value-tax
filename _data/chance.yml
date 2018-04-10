@@ -1,0 +1,22 @@
+---
+#Chance cards
+#Attributes for objects: message, price, img, alt
+
+trafalgar:
+ message: "Advance to Trafalgar Square. If you pass 'Go' Collect £200"
+ price: 200
+ img: /img/trafalgar.svg
+ alt: Trafalgar square on the Monopoly board
+
+mayfair:
+ message: Advance to Mayfair
+ img: /img/mayfair.svg
+ price: 400
+ alt: Mayfair on the Monopoly board
+
+pall_mall:
+ message: "Advance to Pall Mall. If you pass 'Go' Collect £200"
+ img: /img/pall-mall.svg
+ price: 140
+ alt: Pall Mall on the Monopoly board
+
